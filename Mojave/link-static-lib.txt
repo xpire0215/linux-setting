@@ -1,0 +1,1 @@
+g++ something.c -L/opt/package/lib

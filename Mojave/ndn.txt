@@ -1,0 +1,5 @@
+# Add ndn repository
+>> brew tap named-data/ndn
+
+# Install NFD, ndn-cxx, ndndump
+>> brew install nfd ndn-cxx ndnping ndndump

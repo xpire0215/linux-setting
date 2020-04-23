@@ -1,0 +1,31 @@
+# Search Image, [--no-trunc] show full description
+docker search image_name
+
+# Search Image tag
+Use curl or go to docker hub search
+
+# Get Image, [image_name:tag] specify the tag 
+docker pull image_name
+
+### Error response from daemon: conflict
+# First, remove the container with name or id
+docker rm container_name
+docker rm container_id
+
+# Second, remove  the image
+docker rmi image_name
+docker rmi image_id
+
+# Run image and create container
+# [-i] interactive, Keep STDIN open even if not attached
+# [-t] tty, Allocate a pseudo-TTY
+# [-d] detach, Run container in background and print container ID
+docker run -i -t ubuntu
+
+# Show containers
+docker ps -a
+docker container ls -a
+
+# Publish a new image
+docker commit -m "message" -a "publisher_name" container_id new_image_name:image_tag
+

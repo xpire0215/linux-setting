@@ -1,0 +1,50 @@
+" Vundle Requirement
+set nocompatible
+filetype off
+
+" Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'valloric/youcompleteme'
+
+call vundle#end()
+filetype plugin indent on
+" Vundle End
+
+syntax on
+set ai
+" 讓 Vim 使用 256 色
+set t_Co=256
+
+" 使用 space 代替 tab
+set expandtab
+
+" 縮排間隔數
+set tabstop=4
+
+" 自動縮排對齊間隔數
+set shiftwidth=4
+
+inoremap ( ()<Esc>i
+inoremap " ""<Esc>i
+inoremap ' ''<Esc>i
+inoremap [ []<Esc>i
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap {{ {}<ESC>i
+
+" F8 啟用 Tagbar
+nmap <F8> :TagbarToggle<CR>
+" F9 切換 Tagbar
+nmap <F9> :TagbarOpenAutoClose<CR>
+
+
+" YouCompleteMe pop menu color"
+highlight Pmenu cterm=underline ctermfg=black ctermbg=cyan gui=underline guifg=black guibg=darkblue
+
+highlight PmenuSel cterm=underline ctermfg=black ctermbg=darkgray gui=underline guifg=black guibg=gray
+
+
